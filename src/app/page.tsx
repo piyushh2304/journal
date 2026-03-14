@@ -134,8 +134,7 @@ export default function JournalPage() {
       });
       const analysis = await res.json();
 
-      // In a real app, we'd update the DB. For this demo, let's update local state
-      // Actually, let's just show it in the UI
+      
       setEntries(prev => prev.map(entry => 
         entry._id === entryId ? { ...entry, ...analysis } : entry
       ));
